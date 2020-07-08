@@ -1,5 +1,5 @@
 # Google Software Product Sprint
 
-This repo contains my portflio and SPS projects.
+This repo contains my portfolio and SPS projects.
 
 
