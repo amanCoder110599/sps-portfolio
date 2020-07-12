@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+   <title>Aman Kumar Singh</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+               <li><a href="#home" class="scroll"><span class="fa fa-home"></span> Home</a></li>
+               <li><a href="#experience" class="scroll"><span class="fa fa-space-shuttle"></span> Experience</a></li>
+               <li><a href="#contact" class="scroll"><span class="fa fa-envelope"></span> Contact</a></li>
+            </ul>
+         </div>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div id="overlay">
+         <div class="title">
+            <h1><strong>Hello!</strong></h1>
+            <h1><strong>Welcome to my website</strong></h1>
+         </div>
+      </div>
+   </section>
   </body>
+
+
 </html>
