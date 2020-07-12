@@ -16,9 +16,6 @@ h2 {
   font-size: 3.0em;
   color: white;
 }
-h3 {
-  font-size: 2.5em;
-}
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
   background-color: #ed5565;
 }
