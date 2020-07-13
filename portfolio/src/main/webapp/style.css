@@ -136,15 +136,3 @@ h3 {
   width: 50%;
 }
 
-.skills {
-  background:url("https://webdevtrick.com/wp-content/uploads/coding.jpg");
-  background-size: cover;
-  min-height: 100%;
-  padding-bottom: 40px;
-  padding-top:40px;
-}
-#skills-label {
-  font-size:5.0em; 
-  padding-bottom:30px;
-}
-
