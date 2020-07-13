@@ -1,29 +1,47 @@
 html, body {
   background-color: white;
   color:white;
-  font-family: 'Staatliches', cursive;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden; 
 }
 h1 {
-  padding-top: 10px;
-  font-size: 10.0em;
+  padding-top: 5px;
+  font-size: 5.0em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: 'Staatliches', cursive;
 }
 h2 {
   font-size: 3.0em;
   color: white;
+  font-family: 'Staatliches', cursive;
 }
+h3 {
+  font-size: 2.5em;
+  font-family: 'Sans-Serif';
+}
+
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
   background-color: #ed5565;
 }
-#overlay {
-  background: rgba(0, 0, 0, 0.76);
-  height: 1000px;
+.small-intro {
+  background: #e8eaed;
+  padding-top: 60px;
 }
-
+#small-intro {
+  width: 75%;
+  font-size: 2em;
+  margin: 0 auto;
+  color: #212121;
+  padding-bottom: 60px;
+}
+#overlay {
+  background: rgba(0, 0, 0, 0.644);
+  height: 500px;
+}
 .title {
   padding-bottom: 10px;
   width: 1100px;
@@ -33,7 +51,100 @@ h2 {
   top: 250px;
 }
 
+#title {
+  font-size: 6.5em;
+  padding-bottom: 15px;
+}
 #qualif {
   font-size: 3em;
   color:#ff2a4a;
 }
+.ex-timeline {
+  background:rgba(0, 0, 0, 0.644);
+  background-size: cover;
+  min-height: 100%;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 100%;
+  list-style-type: none;
+  margin: 0 auto;
+  display: flex;
+  left: 25%;
+  padding-top: 2%;
+}
+.timeline:before {
+  background: #ed5565;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  left: 10px;
+}
+.timeline-event {
+  position: relative;
+}
+.timeline-event-copy {
+  left: 50px;
+  padding: 32px 32px 0;
+  position: relative;
+  top: -32px;
+  width: 100%;
+}
+.timeline-icon {
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: white;
+  outline: 10px solid #ed5565;
+  display: block;
+  margin: 8px 8px 8px -8px;
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 16px;
+  height: 16px;
+}
+.timeline-thumbnail {
+  background: none repeat scroll 0 0 #ed5565;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+}
+
+#workplace {
+  font-size: 38px;
+}
+#jobPos {
+  font-size: 25px;
+}
+#jobDesc {
+  font-size: 20px;
+  width: 50%;
+}
+
+.skills {
+  background:url("https://webdevtrick.com/wp-content/uploads/coding.jpg");
+  background-size: cover;
+  min-height: 100%;
+  padding-bottom: 40px;
+  padding-top:40px;
+}
+#skills-label {
+  font-size:5.0em; 
+  padding-bottom:30px;
+}
+
