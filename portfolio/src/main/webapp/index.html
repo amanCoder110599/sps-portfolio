@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-   <title>Aman Kumar Singh</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-   <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+   <head>
+      <meta charset="UTF-8">
+      <title>Aman Kumar Singh</title>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-left">
-               <li><a href="#home" class="scroll"><span class="fa fa-home"></span> Home</a></li>
-               <li><a href="#experience" class="scroll"><span class="fa fa-space-shuttle"></span> Experience</a></li>
-               <li><a href="#contact" class="scroll"><span class="fa fa-envelope"></span> Contact</a></li>
+   <body data-spy = "scroll" data-target=".navbar" data-offset="50">
+      <nav class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class = "container-fluid">
+            <div class = "collapse navbar-collapse" id="myNavbar">
+               <ul class = "nav navbar-nav navbar-left">
+                  <li><a href = "#home" class="scroll"><span class="fa fa-home"></span> <b>Home</b></a></li>
+                  <li><a href = "#experience" class="scroll"><span class="fa fa-space-shuttle"></span> <b>Experience</b></a></li>
+                  <li><a href = "#projects" class="scroll"><span class="fa fa-picture-o"></span> <b>Projects</b></a></li>
+                  <li><a href = "#contact" class="scroll"><span class="fa fa-envelope"></span> <b>Contact</b></a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+      <!-- Section Home -->
+      <section id = "home">
+         <div id = "overlay">
+            <div class = "title">
+               <h1>Hello!</h1>
+               <h1>Welcome to my website</h1>
+            </div>
+         </div>
+         <div class = "small-intro">
+            <p id="small-intro"> I am Aman Kumar Singh, CS undergrad studying in Kalyani Government Engineering College.
+               I love doing competitive programming and solving algorithmic challenges.
+               Apart from that I am also a deep learning enthusiast.
+            </p>
+         </div>
+      </section>
+
+      <section class = "ex-timeline" id = "experience"> 
+         <h1 class = "text-center border titles" id = "title"><strong> EXPERIENCE</strong> </h1> 
+         <div class = "job-timeline">
+            <ul class = "timeline">
+               <li class = "timeline-event">
+                  <label class = "timeline-icon"></label>
+                  <div class = "timeline-event-copy">
+                     <p class = "timeline-thumbnail"> January 2020 - Present </p>
+                     <h5 id = "workplace"><a href = "https://www.hackerrank.com/" style="color:white">Hackerrank</a></h5>
+                     <h5 id="jobPos"><strong> Technical Content Engineering Intern </strong></h5>
+                     <p id="jobDesc"> Curating algorithmic problems and refactoring library questions for technical interviews in Codepair and HRW</p>
+                  </div>
+               </li>
+            </ul>
+            <ul class = "timeline">
+               <li class = "timeline-event">
+                  <label class = "timeline-icon"></label>
+                  <div class = "timeline-event-copy">
+                     <p class = "timeline-thumbnail"> April 2019 - June 2019 </p>
+                     <h5 id = "workplace"><a href = "https://www.codechef.com/JUNE19A/problems/INTRPATH" style="color:white">Codechef</a></h5>
+                     <p id="jobDesc">Problem Setter for June Long Challenge 2019</p>
+                  </div>
+               </li>
             </ul>
          </div>
-      </div>
-    </nav>
-
-    <section id="home">
-      <div id="overlay">
-         <div class="title">
-            <h1><strong>Hello!</strong></h1>
-            <h1><strong>Welcome to my website</strong></h1>
-         </div>
-      </div>
-   </section>
-  </body>
-
-
+      </section>
+   </body>
 </html>
