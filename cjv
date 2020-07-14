@@ -1,0 +1,253 @@
+* [33m717085b[m[33m ([m[1;36mHEAD -> [m[1;32mweek-2-step-2[m[33m, [m[1;31morigin/week-2-step-2[m[33m)[m Fetch data from server
+[31m|[m *   [33m5732b8a[m[33m ([m[1;35mrefs/stash[m[33m)[m WIP on week1_walkthourghs: 7dedb17 step1 complete
+[31m|[m [32m|[m[33m\[m  
+[31m|[m [32m|[m * [33medb4b51[m index on week1_walkthourghs: 7dedb17 step1 complete
+[31m|[m [32m|[m[32m/[m  
+[31m|[m * [33m7dedb17[m[33m ([m[1;31morigin/week1_walkthourghs[m[33m, [m[1;32mweek1_walkthourghs[m[33m)[m step1 complete
+[31m|[m[31m/[m  
+* [33m97f12a8[m[33m ([m[1;31morigin/portfolio[m[33m, [m[1;32mportfolio[m[33m)[m Add remaining stuff
+* [33m6991c25[m Add remaining stuff
+* [33m17d7108[m Add remaining stuff
+* [33mf9f3af3[m Added project ID
+* [33mf553a80[m Add experience page
+* [33m79f1135[m Removed some unwanted entities
+* [33m74cf13e[m Add experience page
+* [33mb629264[m Create landing page
+* [33m5f30719[m[33m ([m[1;31morigin/portfolio_branch[m[33m, [m[1;32mportfolio_branch[m[33m)[m Create landing page
+* [33m323c664[m Create landing page
+[33m|[m * [33m7228b05[m[33m ([m[1;32mportfoliobranch[m[33m)[m Create landing page
+[33m|[m[33m/[m  
+* [33me80d709[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Update README.md
+*   [33med73e07[m Merge pull request #2 from amanCoder110599/amanCoder110599-patch-2
+[35m|[m[36m\[m  
+[35m|[m * [33m3fda0d7[m Update README.md
+[35m|[m[35m/[m  
+[35m|[m * [33m468d2c9[m[33m ([m[1;31morigin/amanCoder110599-patch-1[m[33m)[m Update README.md
+[35m|[m[35m/[m  
+*   [33m7bb642e[m Merge pull request #57 from janicejl/patch-1
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33mb62677a[m Also update jsp example to use formInputElementName.
+[1;32m|[m * [33m21d9ceb[m Use provided formInputElementName parameter
+[1;32m|[m[1;32m/[m  
+*   [33m8e04901[m Add instructions for modifying the .bashrc file.
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m622de1e[m Add instructions for modifying .bashrc file.
+[1;34m|[m[1;34m/[m  
+*   [33m9d07444[m Merge pull request #55 from devonwasson/patch-1
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33mb55ef57[m Fix typo
+[1;36m|[m[1;36m/[m  
+*   [33m6eb71e6[m Merge pull request #54 from google/nanselmo-patch-1
+[32m|[m[33m\[m  
+[32m|[m * [33mdafb961[m give convention of project id
+[32m|[m[32m/[m  
+*   [33m334a8f2[m Fix some broken links and typos
+[34m|[m[35m\[m  
+[34m|[m * [33m9d480f7[m Fix some broken links and typos
+* [35m|[m   [33ma1d693e[m Update all projects to use the new Maven plugin.
+[36m|[m[1;31m\[m [35m\[m  
+[36m|[m * [35m|[m [33m93165aa[m Update all projects to use the new Maven plugin.
+[36m|[m[36m/[m [35m/[m  
+* [35m|[m   [33m2fe8f5e[m Merge pull request #52 from google/new-mvn-plugin
+[1;32m|[m[1;33m\[m [35m\[m  
+[1;32m|[m * [35m|[m [33meb2b586[m Fix project ID placeholder.
+[1;32m|[m[1;32m/[m [35m/[m  
+* [35m|[m   [33ma72bedc[m Merge pull request #51 from google/new-mvn-plugin
+[1;34m|[m[1;35m\[m [35m\[m  
+[1;34m|[m * [35m|[m [33mc7da472[m Update portfolio to only use the new Maven plugin. Remove references to the old Maven plugin.
+[1;34m|[m[1;34m/[m [35m/[m  
+* [35m|[m   [33mbfaca98[m Use non-deprecated appengine maven plugin for deploying portfolio
+[35m|[m[31m\[m [35m\[m  
+[35m|[m [31m|[m[35m/[m  
+[35m|[m[35m/[m[31m|[m   
+[35m|[m * [33m978036b[m Use non-deprecated appengine maven plugin for deploying portfolio
+* [31m|[m   [33m2146887[m Ensure image uploads work on GCS localhost.
+[32m|[m[33m\[m [31m\[m  
+[32m|[m * [31m|[m [33mbd38627[m Ensure image uploads work on GCS localhost.
+[32m|[m[32m/[m [31m/[m  
+* [31m|[m   [33md52de83[m Add file links to week 2 walkthrough.
+[34m|[m[35m\[m [31m\[m  
+[34m|[m * [31m|[m [33m54320f6[m Add file links to week 2.
+* [35m|[m [31m|[m   [33m6c01b77[m Merge pull request #46 from google/kevin-week-1
+[36m|[m[35m\[m [35m\[m [31m\[m  
+[36m|[m [35m|[m[35m/[m [31m/[m  
+[36m|[m * [31m|[m [33m4a50e44[m Add file links to the example html project  files.
+* [1;31m|[m [31m|[m   [33m503cc04[m Add instructions for setting Java 8 as the default Java version.
+[1;32m|[m[1;31m\[m [1;31m\[m [31m\[m  
+[1;32m|[m [1;31m|[m[1;31m/[m [31m/[m  
+[1;32m|[m * [31m|[m [33mde52f9f[m Add instructions for setting Java 8 as the default Java version.
+[1;32m|[m[1;32m/[m [31m/[m  
+* [31m|[m   [33md542d99[m Merge pull request #43 from andreahu12/fix
+[1;34m|[m[31m\[m [31m\[m  
+[1;34m|[m [31m|[m[31m/[m  
+[1;34m|[m * [33m02528bf[m Fix typo in teachme path on github-setup-walkthrough.md
+* [1;35m|[m   [33m0c938e0[m Merge pull request #42 from josueetcom/patch-1
+[1;36m|[m[31m\[m [1;35m\[m  
+[1;36m|[m * [1;35m|[m [33m008bde6[m Break up long markdown line
+[1;36m|[m * [1;35m|[m [33m41c109b[m Add testing tip to calendar-walkthrough.md
+[1;36m|[m [1;35m|[m[1;35m/[m  
+* [1;35m|[m   [33md1d7778[m Merge pull request #44 from apicardgoog/add_test
+[1;35m|[m[33m\[m [1;35m\[m  
+[1;35m|[m [33m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[33m|[m   
+[1;35m|[m * [33m8c38b49[m Fix link to intro
+[1;35m|[m * [33m5ce8566[m Add a test for insufficient time for meeting
+[1;35m|[m[1;35m/[m  
+*   [33m47e5cfd[m Merge pull request #41 from CubeOfCheese/master
+[34m|[m[35m\[m  
+[34m|[m * [33m8baa884[m Fixes typo in sentiment analysis walkthrough
+[34m|[m[34m/[m  
+*   [33m57a28a5[m Merge pull request #40 from SofeeyaAtar/patch-1
+[36m|[m[1;31m\[m  
+[36m|[m * [33mf39239e[m Update github-setup-walkthrough.md
+[36m|[m[36m/[m  
+*   [33m7aff855[m Merge pull request #39 from google/KevinDraft
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33m12ced3f[m Fix a typo in ufos/README.md
+[1;32m|[m * [33m835f8ab[m Fix a typo in ufos/README.md
+* [1;33m|[m   [33mf4dea84[m Merge pull request #38 from google/KevinDraft
+[1;34m|[m[1;33m\[m [1;33m\[m  
+[1;34m|[m [1;33m|[m[1;33m/[m  
+[1;34m|[m * [33m1dbb980[m Add links back to the libraries walkthrough.
+* [1;35m|[m   [33mc9f1849[m Merge pull request #37 from google/KevinDraft
+[1;36m|[m[1;35m\[m [1;35m\[m  
+[1;36m|[m [1;35m|[m[1;35m/[m  
+[1;36m|[m * [33m63c8544[m Add link to charts walkthrough.
+[1;36m|[m[1;36m/[m  
+*   [33m87d6d5d[m Merge pull request #36 from phaas/cache-deploy-fix
+[32m|[m[33m\[m  
+[32m|[m * [33m46a67d8[m Issue #35: Fix app deployment due to parsing error of unspecified cache timeout interval.
+[32m|[m * [33mc7ce280[m Issue #35: Fix app deployment due to parsing error of unspecified cache timeout interval.
+[32m|[m[32m/[m  
+*   [33m5b7cbdd[m Merge pull request #34 from google/KevinDraft
+[34m|[m[35m\[m  
+[34m|[m * [33m4859690[m Add charts library project.
+[34m|[m * [33mad01dbd[m Add charts library project.
+* [35m|[m   [33m65fc738[m Merge pull request #31 from phaas/week-1-form
+[36m|[m[1;31m\[m [35m\[m  
+[36m|[m * [35m|[m [33m43bfa18[m Explicitly default unspecified request parameters (and avoid NPE if text is omitted). Avoid autoboxing Boolean values.
+* [1;31m|[m [35m|[m   [33m603282a[m Merge pull request #32 from phaas/misc-typos
+[1;32m|[m[1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m * [1;31m|[m [35m|[m [33m15c3409[m Fixing typos
+[1;32m|[m * [1;31m|[m [35m|[m [33m3987e0f[m Fixing typos
+[1;32m|[m[1;32m/[m [1;31m/[m [35m/[m  
+* [1;31m|[m [35m|[m   [33meb0e1b9[m Merge pull request #8 from phaas/patch1
+[1;31m|[m[1;35m\[m [1;31m\[m [35m\[m  
+[1;31m|[m [1;35m|[m[1;31m/[m [35m/[m  
+[1;31m|[m[1;31m/[m[1;35m|[m [35m|[m   
+[1;31m|[m * [35m|[m [33m7891b2b[m Revise collaborator instructions to cover both UI flows.
+[1;31m|[m * [35m|[m [33mdc0e6f8[m Update collaborator invitation steps
+* [1;35m|[m [35m|[m   [33mdb9de77[m Merge pull request #28 from google/KevinDraft
+[1;36m|[m[35m\[m [1;35m\[m [35m\[m  
+[1;36m|[m [35m|[m [1;35m|[m[35m/[m  
+[1;36m|[m [35m|[m[35m/[m[1;35m|[m   
+[1;36m|[m * [1;35m|[m [33mb06e6e5[m Add a link from the week 3 walkthrough to the week 4 walkthrough.
+* [31m|[m [1;35m|[m   [33m6323835[m Merge pull request #27 from google/KevinDraft
+[32m|[m[31m\[m [31m\[m [1;35m\[m  
+[32m|[m [31m|[m[31m/[m [1;35m/[m  
+[32m|[m * [1;35m|[m [33m06fd22e[m Add link from the week 2 walkthrough to the week 3 walkthrough.
+* [33m|[m [1;35m|[m   [33mb0d69e6[m Merge pull request #26 from google/KevinDraft
+[34m|[m[33m\[m [33m\[m [1;35m\[m  
+[34m|[m [33m|[m[33m/[m [1;35m/[m  
+[34m|[m * [1;35m|[m [33m456a486[m Add file links to week 4 project walkthrough.
+* [35m|[m [1;35m|[m   [33mdc0969d[m Merge pull request #25 from google/KevinDraft
+[36m|[m[35m\[m [35m\[m [1;35m\[m  
+[36m|[m [35m|[m[35m/[m [1;35m/[m  
+[36m|[m * [1;35m|[m [33m9673c71[m Add file links to week 4 intro walkthrough.
+[36m|[m[36m/[m [1;35m/[m  
+* [1;35m|[m   [33ma297e8a[m Merge pull request #21 from jaredjj3/week-1-review
+[1;32m|[m[1;33m\[m [1;35m\[m  
+[1;32m|[m * [1;35m|[m [33m753e5e7[m Fix typos in portfolio walkthrough.
+[1;32m|[m * [1;35m|[m [33m78fc40b[m Change portfolio walkthrough Development Server section to Development Workflow.
+[1;32m|[m * [1;35m|[m [33md4d6416[m Add ctrl + c tip to the portfolio walkthrough.
+* [1;33m|[m [1;35m|[m   [33m5da3f47[m Merge pull request #24 from google/KevinDraft
+[1;33m|[m[1;35m\[m [1;33m\[m [1;35m\[m  
+[1;33m|[m [1;35m|[m[1;33m/[m [1;35m/[m  
+[1;33m|[m[1;33m/[m[1;35m|[m [1;35m|[m   
+[1;33m|[m * [1;35m|[m [33me38e759[m Add static-files to appengine-web.xml.
+* [1;35m|[m [1;35m|[m   [33m85635ac[m Merge pull request #19 from google/KevinDraft
+[1;36m|[m[1;35m\[m [1;35m\[m [1;35m\[m  
+[1;36m|[m [1;35m|[m[1;35m/[m [1;35m/[m  
+[1;36m|[m * [1;35m|[m [33mdb78ada[m Add file links to translation walkthrough.
+* [31m|[m [1;35m|[m   [33me1617e5[m Merge pull request #18 from google/KevinDraft
+[32m|[m[31m\[m [31m\[m [1;35m\[m  
+[32m|[m [31m|[m[31m/[m [1;35m/[m  
+[32m|[m * [1;35m|[m [33me52857a[m Add file links to sentiment analysis walkthrough.
+* [33m|[m [1;35m|[m   [33mc048374[m Merge pull request #17 from google/KevinDraft
+[34m|[m[33m\[m [33m\[m [1;35m\[m  
+[34m|[m [33m|[m[33m/[m [1;35m/[m  
+[34m|[m * [1;35m|[m [33mdfee561[m Add file links to week 3 walkthroughs.
+* [35m|[m [1;35m|[m   [33mb0fbc6c[m Merge pull request #16 from google/KevinDraft
+[36m|[m[35m\[m [35m\[m [1;35m\[m  
+[36m|[m [35m|[m[35m/[m [1;35m/[m  
+[36m|[m * [1;35m|[m [33m58f8fb6[m Add file links to image analysis walkthrough.
+[36m|[m[36m/[m [1;35m/[m  
+* [1;35m|[m   [33m51c61cb[m Merge pull request #15 from google/KevinDraft
+[1;32m|[m[1;33m\[m [1;35m\[m  
+[1;32m|[m * [1;35m|[m [33mcd6684f[m Link to GitHub documentation for creating a pull request.
+[1;32m|[m * [1;35m|[m [33m30edff7[m Link to GitHub documentation for creating a pull request.
+* [1;33m|[m [1;35m|[m   [33m26caa2c[m Merge pull request #14 from google/KevinDraft
+[1;34m|[m[1;33m\[m [1;33m\[m [1;35m\[m  
+[1;34m|[m [1;33m|[m[1;33m/[m [1;35m/[m  
+[1;34m|[m * [1;35m|[m [33medc9ab1[m Add file links to Blobstore walkthrough.
+* [1;35m|[m [1;35m|[m   [33md8caeb1[m Merge pull request #13 from google/NickiDev
+[1;36m|[m[31m\[m [1;35m\[m [1;35m\[m  
+[1;36m|[m * [1;35m|[m [1;35m|[m [33m48b8c4a[m text wrap on line 185
+[1;36m|[m * [1;35m|[m [1;35m|[m [33maef1893[m added new line after header, instructions for creating dirs
+[1;36m|[m * [1;35m|[m [1;35m|[m [33mde949a2[m added images dir creation instructions
+[1;36m|[m[1;36m/[m [1;35m/[m [1;35m/[m  
+* [1;35m|[m [1;35m|[m   [33me31d4c8[m Merge pull request #12 from jonathantanmy/clarify-url
+[32m|[m[33m\[m [1;35m\[m [1;35m\[m  
+[32m|[m * [1;35m|[m [1;35m|[m [33m6ed2afd[m Clarify that GitHub repo URL starts with https://
+[32m|[m[32m/[m [1;35m/[m [1;35m/[m  
+* [1;35m|[m [1;35m|[m   [33m912a6c1[m Merge pull request #11 from google/KevinDraft
+[34m|[m[1;35m\[m [1;35m\[m [1;35m\[m  
+[34m|[m [1;35m|[m[1;35m/[m [1;35m/[m  
+[34m|[m * [1;35m|[m [33ma3a9a0b[m Add file links to week 3 walkthroughs.
+* [35m|[m [1;35m|[m   [33m9a137e2[m Merge pull request #10 from phaas/phaas-patch-4-1
+[36m|[m[1;31m\[m [35m\[m [1;35m\[m  
+[36m|[m * [35m|[m [1;35m|[m [33m440cc1a[m Disable caching of static resources
+* [1;31m|[m [35m|[m [1;35m|[m   [33mdd69f51[m Merge pull request #9 from phaas/patch2
+[1;31m|[m[1;33m\[m [1;31m\[m [35m\[m [1;35m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [35m/[m [1;35m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [35m|[m [1;35m|[m   
+[1;31m|[m * [35m|[m [1;35m|[m [33m37115d3[m Add note on credential.help setting
+[1;31m|[m * [35m|[m [1;35m|[m [33me6b62a3[m Add details to github project setup step
+[1;31m|[m [1;35m|[m [35m|[m[1;35m/[m  
+[1;31m|[m [1;35m|[m[1;35m/[m[35m|[m   
+* [1;35m|[m [35m|[m   [33m7e2ce0e[m Merge pull request #7 from google/KevinDraft
+[1;35m|[m[35m\[m [1;35m\[m [35m\[m  
+[1;35m|[m [35m|[m[1;35m/[m [35m/[m  
+[1;35m|[m[1;35m/[m[35m|[m [35m/[m   
+[1;35m|[m [35m|[m[35m/[m    
+[1;35m|[m * [33m2098434[m Add top-level libraries walkthrough.
+* [1;35m|[m   [33ma1b7ffd[m Merge pull request #6 from google/KevinDraft
+[1;36m|[m[1;35m\[m [1;35m\[m  
+[1;36m|[m [1;35m|[m[1;35m/[m  
+[1;36m|[m * [33md9b8804[m Fix a line break.
+* [31m|[m   [33m968c13f[m Merge pull request #5 from google/KevinDraft
+[32m|[m[31m\[m [31m\[m  
+[32m|[m [31m|[m[31m/[m  
+[32m|[m * [33m9fd0aa2[m Add file links to week 2 walkthroughs.
+* [33m|[m   [33m4239e66[m Merge pull request #4 from google/KevinDraft
+[34m|[m[33m\[m [33m\[m  
+[34m|[m [33m|[m[33m/[m  
+[34m|[m * [33m125b0ea[m Add file links to portfolio walkthrough.
+[34m|[m * [33m03c80a3[m Remove broken button icons and use absolute paths.
+[34m|[m * [33mce23207[m Add link to README.md file.
+[34m|[m[34m/[m  
+*   [33m9a2ea02[m Merge pull request #3 from alisonberkowitz/update-portfolio-walkthrough
+[36m|[m[1;31m\[m  
+[36m|[m * [33me6aad5e[m Update portfolio-walkthrough.md
+[36m|[m[36m/[m  
+*   [33mf43957b[m Merge pull request #2 from FluffySheep/patch-1
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33m1e3d5be[m Update Readme with edge case first time setup
+[1;32m|[m[1;32m/[m  
+*   [33m8fb1a3e[m Merge pull request #1 from dulsonan/update-github-setup-walkthrough
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m844dfe8[m Add instructions for setting up git config
+[1;34m|[m * [33m9bb96ca[m Remove "team's", since every student will have their own repo
+[1;34m|[m * [33m8cd4f72[m Make sure readers are in the right directory before running git
+[1;34m|[m[1;34m/[m  
+* [33m849babc[m Initial commit

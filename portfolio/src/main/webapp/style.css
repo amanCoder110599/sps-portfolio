@@ -248,3 +248,13 @@ footer {
   text-align: center;
 }
 
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#server-comments-container {
+  margin-top: 20px;
+}
+
