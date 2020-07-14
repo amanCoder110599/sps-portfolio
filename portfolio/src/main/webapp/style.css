@@ -248,3 +248,24 @@ footer {
   text-align: center;
 }
 
+div.fetchDiv {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 7%;
+  padding-right: 7%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.fetchDiv p.header {
+  color: black;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+div.fetchDiv p.info {
+  color: black;
+  font-size: 20px;
+  margin: 5px 0;
+}
