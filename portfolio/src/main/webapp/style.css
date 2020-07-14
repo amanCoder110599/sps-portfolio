@@ -1,7 +1,7 @@
 html, body {
   background-color: white;
   color:white;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -18,29 +18,36 @@ h2 {
   font-size: 3.0em;
   color: white;
   font-family: 'Staatliches', cursive;
+  
 }
 h3 {
   font-size: 2.5em;
   font-family: 'Sans-Serif';
+  text-align: center;
 }
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  background-color: #ed5565;
-}
 .small-intro {
-  background: #e8eaed;
+  background: #4e4c4c;
   padding-top: 60px;
 }
 #small-intro {
   width: 75%;
   font-size: 2em;
   margin: 0 auto;
-  color: #212121;
+  color: white;
   padding-bottom: 60px;
 }
 #overlay {
   background: rgba(0, 0, 0, 0.644);
   height: 500px;
+  display: flex;
+  left:20%;
+}
+.img
+{
+    width: 55%;
+    padding-top: 15%;
+    left:5%;
 }
 .title {
   padding-bottom: 10px;
@@ -76,6 +83,15 @@ h3 {
   left: 25%;
   padding-top: 2%;
 }
+
+.skillslist {
+  width: 75%;
+  font-size: 2em;
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 60px;
+}
+
 .timeline:before {
   background: #ed5565;
   content: '';
@@ -136,3 +152,85 @@ h3 {
   width: 50%;
 }
 
+#iconscp {
+  clear: left;
+  display:block;
+  left: 35%;
+}
+
+
+.project{
+  background:#4e4c4c;
+  background-size: cover;
+  min-height: 100%;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  left:35%;
+}
+
+.project-details {
+  left: 50px;
+  padding: 32px 32px 0;
+  position: relative;
+  top: -32px;
+  width: 100%;
+  left:20%;
+}
+
+
+.contact-section {
+  background-color:rgba(0, 0, 0, 0.644);
+  background-size: cover;
+  height: 350px;
+  padding-top: 20px;
+} 
+.contact-buttons {
+  display: block;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+}
+.contact {
+  top: 280px;
+  position: relative;
+  font-size: 70%;
+  width: 140px;
+  display: inline-block;
+  cursor: pointer; 
+  padding-bottom: 8px;
+}
+
+
+.btn-linkedin {
+  background: #0E76A8;
+  border-radius: 5px;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #084461;
+}
+.btn-github {
+  background-color: #24292e;
+  border-radius: 5px;
+  color: white; 
+  border-width: 1px;
+  border-style: solid;
+  border-color: #084461;
+}
+.btn-google {
+  background-color: #141f1f;
+  border-radius: 5px;
+  color: white; 
+  border-width: 1px;
+  border-style: solid;
+  border-color: #084461;
+}
+.btn-facebook {
+  background-color: #4267b2;
+  border-radius: 5px;
+  color: white; 
+  border-width: 1px;
+  border-style: solid;
+  border-color: #084461;
+}
