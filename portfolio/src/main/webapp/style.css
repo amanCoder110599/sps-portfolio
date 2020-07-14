@@ -234,3 +234,16 @@ h3 {
   border-style: solid;
   border-color: #084461;
 }
+
+
+footer {
+  background-color: #4e4c4c;
+  color: white;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+}
