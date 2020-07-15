@@ -19,34 +19,35 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.*;
-import com.google.gson.Gson;
+import java.util.ArrayList;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
-  
-  private ArrayList<String> list = new ArrayList<>();
-  private void populate(){
-    list.add("Comment #1");
-    list.add("Comment #2");
-    list.add("Comment #3");
-  }
+  private ArrayList<String> comments = new ArrayList<>();
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    // Get the input from the form.
+    String comment = getParameter(request, "text-input", "");
+    System.out.println(comment);
+    comments.add(comment);
 
-    populate();
-    String json = convertToJsonUsingGson();
-    response.setContentType("application/json;");
-    response.getWriter().println(json);
+    // Respond with the result.
+    response.setContentType("text/html;");
+    response.getWriter().println(comments);
   }
 
-  private String convertToJsonUsingGson() {
-    Gson gson = new Gson();
-    String json = gson.toJson(list);
-    return json;
-  
+  /**
+   * @return the request parameter, or the default value if the parameter
+   *         was not specified by the client
+   */
+  private String getParameter(HttpServletRequest request, String name, String defaultValue) {
+    String value = request.getParameter(name);
+    if (value == null) {
+      return defaultValue;
+    }
+    return value;
   }
 }

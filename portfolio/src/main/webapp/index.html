@@ -123,15 +123,15 @@
       <footer>
          <p id="footer"> Developed by Aman </p>
       </footer>
-      <div id="content">
-         <h1>Comments</h1>
-         <ul id="server-comment-container" style="color:black"></ul>
-       </div>
 
-      <div class="fetchDiv">
-         <p class="header">This data is fetched from the server:</p>
-         <p class="info" id="fetch_data"></p>
-      </div>
+      <h1>Leave your comments</h1>
+
+      <form action="/data" method="POST">
+         <textarea name="text-input"></textarea>
+         <br/><br/>
+         <input type="submit" />
+       </form>
+
    </body>
    <script src="script.js"></script>
 </html>

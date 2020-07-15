@@ -20,11 +20,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.util.ArrayList;
 /** Servlet that processes text. */
 @WebServlet("/text")
 public final class TextProcessorServlet extends HttpServlet {
 
+  
+  
+  private ArrayList<String> comments = new ArrayList<>();
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
@@ -36,7 +39,7 @@ public final class TextProcessorServlet extends HttpServlet {
     if (upperCase) {
       text = text.toUpperCase();
     }
-
+    comments.add(Boolean.toString(upperCase));
     // Break the text into individual words.
     String[] words = text.split("\\s*,\\s*");
 
@@ -48,6 +51,7 @@ public final class TextProcessorServlet extends HttpServlet {
     // Respond with the result.
     response.setContentType("text/html;");
     response.getWriter().println(Arrays.toString(words));
+    response.getWriter().println(comments);
   }
 
   /**
