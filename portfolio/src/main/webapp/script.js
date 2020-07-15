@@ -1,13 +1,24 @@
-function fetchData() {
-  fetch('/data').then(response => response.text()).then(data => {
-    document.getElementById('fetch_data').innerText = data;
+
+function getComments() {
+  fetch('/data').then(response => response.json()).then((comments) => {
+
+    const commentsListElement = document.getElementById('server-comment-container');
+    commentsListElement.innerHTML = '';
+    for (index = 0; index < comments.length; index++) { 
+      console.log(comments[index]);
+      commentsListElement.appendChild(
+        createListElement(comments[index]));
+    } 
   });
 }
 
-/*
- * Functions to be called after
- * the window has loaded
- */
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
 window.onload = () => {
-  fetchData();
+  getComments();
 }

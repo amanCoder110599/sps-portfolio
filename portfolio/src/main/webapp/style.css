@@ -247,7 +247,15 @@ footer {
   position: relative;
   text-align: center;
 }
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
 
+#server-comments-container {
+  margin-top: 20px;
+}
 div.fetchDiv {
   margin-left: 10%;
   margin-right: 10%;
