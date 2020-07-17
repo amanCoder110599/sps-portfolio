@@ -14,40 +14,34 @@
 
 package com.google.sps.servlets;
 
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
+
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/data")
+@WebServlet("/new-comment")
 public class DataServlet extends HttpServlet {
 
-  private ArrayList<String> comments = new ArrayList<>();
+  
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // Get the input from the form.
-    String comment = getParameter(request, "text-input", "");
-    System.out.println(comment);
-    comments.add(comment);
+    String title = request.getParameter("comment");
+    long timestamp = System.currentTimeMillis();
 
-    // Respond with the result.
-    response.setContentType("text/html;");
-    response.getWriter().println(comments);
-  }
+    Entity commentEntity = new Entity("Comment");
+    commentEntity.setProperty("comment", title);
+    commentEntity.setProperty("timestamp", timestamp);
 
-  /**
-   * @return the request parameter, or the default value if the parameter
-   *         was not specified by the client
-   */
-  private String getParameter(HttpServletRequest request, String name, String defaultValue) {
-    String value = request.getParameter(name);
-    if (value == null) {
-      return defaultValue;
-    }
-    return value;
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    datastore.put(commentEntity);
+
+    response.sendRedirect("/index.html");
   }
 }
