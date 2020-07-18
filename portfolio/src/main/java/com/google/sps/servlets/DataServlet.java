@@ -14,6 +14,8 @@
 
 package com.google.sps.servlets;
 
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -22,26 +24,30 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.json.simple.JSONObject;    
 
-
-/** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/new-comment")
+@WebServlet("/get_status")
 public class DataServlet extends HttpServlet {
-
-  
-
   @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String title = request.getParameter("comment");
-    long timestamp = System.currentTimeMillis();
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    JSONObject status = new JSONObject();
+    
+    UserService userService = UserServiceFactory.getUserService();
+    if (userService.isUserLoggedIn()) {
+      status.put("logged_in", true);
+      String userEmail = userService.getCurrentUser().getEmail();
+      String urlToRedirectToAfterUserLogsOut = "/index.html";
+      String logoutUrl = userService.createLogoutURL(urlToRedirectToAfterUserLogsOut);
+      status.put("logoutUrl", logoutUrl);
+      status.put("email", userEmail);
+    } else {
+      status.put("logged_in", false);
+      String urlToRedirectToAfterUserLogsIn = "/index.html";
+      String loginUrl = userService.createLoginURL(urlToRedirectToAfterUserLogsIn);
+      status.put("loginUrl", loginUrl);
+    }
 
-    Entity commentEntity = new Entity("Comment");
-    commentEntity.setProperty("comment", title);
-    commentEntity.setProperty("timestamp", timestamp);
-
-    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-    datastore.put(commentEntity);
-
-    response.sendRedirect("/index.html");
+    response.setContentType("application/json;");
+    response.getWriter().println(status);
   }
 }

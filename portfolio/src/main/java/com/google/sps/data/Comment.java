@@ -1,3 +1,4 @@
+
 // Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,11 +20,13 @@ public final class Comment {
 
   private final long id;
   private final String comment;
+  private final String email;
   private final long timestamp;
 
-  public Comment(long id, String comment, long timestamp) {
+  public Comment(long id, String comment, String email, long timestamp) {
     this.id = id;
     this.comment = comment;
+    this.email = email;
     this.timestamp = timestamp;
   }
 }
