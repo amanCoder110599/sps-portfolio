@@ -36,6 +36,7 @@ public class DataServlet extends HttpServlet {
       String urlToRedirectToAfterUserLogsOut = "/index.html";
       String logoutUrl = userService.createLogoutURL(urlToRedirectToAfterUserLogsOut);
       status.put("logoutUrl", logoutUrl);
+      status.put("email", userEmail);
     } else {
       status.put("logged_in", false);
       String urlToRedirectToAfterUserLogsIn = "/index.html";
