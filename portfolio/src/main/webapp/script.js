@@ -1,14 +1,15 @@
 
-function getComments() {
-  fetch('/data').then(response => response.json()).then((comments) => {
-
-    const commentsListElement = document.getElementById('server-comment-container');
-    commentsListElement.innerHTML = '';
-    for (index = 0; index < comments.length; index++) { 
-      console.log(comments[index]);
-      commentsListElement.appendChild(
-        createListElement(comments[index]));
-    } 
+function getStatus() {
+  fetch('/get_status').then(response => response.json()).then((status) => {
+    if(status.logged_in){
+      console.log("Hola");
+      console.log(status.logoutUrl);
+    }
+    else{
+      console.log("Hello")
+      console.log(status.loginUrl);
+    }
+    
   });
 }
 
@@ -20,5 +21,5 @@ function createListElement(text) {
 }
 
 window.onload = () => {
-  getComments();
+  getStatus();
 }

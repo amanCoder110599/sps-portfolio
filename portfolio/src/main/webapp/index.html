@@ -20,6 +20,7 @@
                   <li><a href = "#experience" class="scroll"><span class="fa fa-space-shuttle"></span> <b>Experience</b></a></li>
                   <li><a href = "#projects" class="scroll"><span class="fa fa-picture-o"></span> <b>Projects</b></a></li>
                   <li><a href = "#contact" class="scroll"><span class="fa fa-envelope"></span> <b>Contact</b></a></li>
+                  <li><a href = "#comment" class="scroll"><span class="fa fa-comments"></span> <b>Comment</b></a></li>
                </ul>
             </div>
          </div>
@@ -120,18 +121,20 @@
             <a class="btn btn-facebook btn-lg" href="https://www.facebook.com/profile.php?id=100024122352318" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a>
          </div> 
        </section> 
+      
+
+      <section class = "comment-section" id = "comment">
+         <h2 class = "text-center"> Leave your comments </h2> 
+         <form action="/new-comment" autocomplete="off" method="POST">
+            <input type="text" id="comment" name = "comment">
+            <input type="submit" value = "Post" style="color:black"/>
+         </form>
+      </section>
+
+      
       <footer>
-         <p id="footer"> Developed by Aman </p>
+         <p id="footer"> Aman Kumar Singh © 2020 | Software Product Sprint</p>
       </footer>
-
-      <h1>Leave your comments</h1>
-
-      <form action="/data" method="POST">
-         <textarea name="text-input"></textarea>
-         <br/><br/>
-         <input type="submit" />
-       </form>
-
    </body>
    <script src="script.js"></script>
 </html>

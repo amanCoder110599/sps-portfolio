@@ -211,7 +211,7 @@ h3 {
   border-color: #084461;
 }
 .btn-github {
-  background-color: #24292e;
+  background-color: #010508;
   border-radius: 5px;
   color: white; 
   border-width: 1px;
@@ -219,7 +219,7 @@ h3 {
   border-color: #084461;
 }
 .btn-google {
-  background-color: #141f1f;
+  background-color: #e72a2a;
   border-radius: 5px;
   color: white; 
   border-width: 1px;
@@ -237,7 +237,7 @@ h3 {
 
 
 footer {
-  background-color: #4e4c4c;
+  background-color: rgba(0, 0, 0, 0.644);
   color: white;
   line-height: 20px;
   padding-top: 10px;
@@ -256,24 +256,33 @@ footer {
 #server-comments-container {
   margin-top: 20px;
 }
-div.fetchDiv {
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-left: 7%;
-  padding-right: 7%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.comment-section {
+  background:#4e4c4c;
+  background-size: cover;
+  min-height: 100%;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  left:35%;
+} 
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color:black;
 }
 
-div.fetchDiv p.header {
-  color: black;
-  font-size: 20px;
-  margin: 5px 0;
+form{
+  margin: 0 auto; 
+  width:800px;
+}
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
 }
 
-div.fetchDiv p.info {
-  color: black;
-  font-size: 20px;
-  margin: 5px 0;
+#status {
+  margin-top: 20px;
 }

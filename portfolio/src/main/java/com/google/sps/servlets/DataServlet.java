@@ -14,40 +14,36 @@
 
 package com.google.sps.servlets;
 
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
+import org.json.simple.JSONObject;    
 
-/** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/data")
+@WebServlet("/get_status")
 public class DataServlet extends HttpServlet {
-
-  private ArrayList<String> comments = new ArrayList<>();
-
   @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // Get the input from the form.
-    String comment = getParameter(request, "text-input", "");
-    System.out.println(comment);
-    comments.add(comment);
-
-    // Respond with the result.
-    response.setContentType("text/html;");
-    response.getWriter().println(comments);
-  }
-
-  /**
-   * @return the request parameter, or the default value if the parameter
-   *         was not specified by the client
-   */
-  private String getParameter(HttpServletRequest request, String name, String defaultValue) {
-    String value = request.getParameter(name);
-    if (value == null) {
-      return defaultValue;
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    JSONObject status = new JSONObject();
+    
+    UserService userService = UserServiceFactory.getUserService();
+    if (userService.isUserLoggedIn()) {
+      status.put("logged_in", true);
+      String userEmail = userService.getCurrentUser().getEmail();
+      String urlToRedirectToAfterUserLogsOut = "/index.html";
+      String logoutUrl = userService.createLogoutURL(urlToRedirectToAfterUserLogsOut);
+      status.put("logoutUrl", logoutUrl);
+    } else {
+      status.put("logged_in", false);
+      String urlToRedirectToAfterUserLogsIn = "/index.html";
+      String loginUrl = userService.createLoginURL(urlToRedirectToAfterUserLogsIn);
+      status.put("loginUrl", loginUrl);
     }
-    return value;
+
+    response.setContentType("application/json;");
+    response.getWriter().println(status);
   }
 }
