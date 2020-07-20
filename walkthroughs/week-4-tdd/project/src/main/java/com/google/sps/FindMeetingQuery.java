@@ -15,9 +15,60 @@
 package com.google.sps;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Collections;
+import java.util.Set;
 
 public final class FindMeetingQuery {
+
+  public static final Comparator<Event> orderByStartThenEnd = new Comparator<Event>() {
+    @Override
+    public int compare(Event a, Event b){
+      if(a.getWhen().start() != b.getWhen().start())
+        return Integer.compare(a.getWhen().start(), b.getWhen().start());
+      else
+        return Integer.compare(a.getWhen().end(), b.getWhen().end());
+    }
+  };
+
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-    throw new UnsupportedOperationException("TODO: Implement this method.");
+    Collection<String> peopleAttending = request.getAttendees();
+    List<Event> eventWithPeopleAttending = new ArrayList<>();
+    for(Event e : events){
+      boolean is_not_attending = true;
+      for(String x : e.getAttendees()){
+        if(peopleAttending.contains(x))
+          is_not_attending = false;
+      }
+      if(!is_not_attending)
+        eventWithPeopleAttending.add(e);
+    }
+    Collections.sort(eventWithPeopleAttending, orderByStartThenEnd);
+
+    Collection<TimeRange> opt_ranges = new ArrayList<>();
+
+    //Edge case
+    //if the duration is greater than the duration of a day
+    if(request.getDuration() > TimeRange.WHOLE_DAY.duration()){
+      return opt_ranges;
+    }
+    
+    int maxTimeTillNow = TimeRange.START_OF_DAY;
+    for(Event e : eventWithPeopleAttending){
+      if(e.getWhen().end() <= maxTimeTillNow)
+        continue;
+      TimeRange curr = TimeRange.fromStartDuration(maxTimeTillNow, (int)request.getDuration());
+      if(!curr.overlaps(e.getWhen())) //if [maxTimeTillNow, maxTimeTillNow + request.getDuration() - 1] does not overlap with e
+        opt_ranges.add(TimeRange.fromStartEnd(maxTimeTillNow, e.getWhen().start(), false));
+      maxTimeTillNow = Math.max(maxTimeTillNow, e.getWhen().end());
+    }
+
+    if(maxTimeTillNow <= TimeRange.END_OF_DAY)
+      opt_ranges.add(TimeRange.fromStartEnd(maxTimeTillNow, TimeRange.END_OF_DAY, true));
+
+    return opt_ranges;
   }
 }
