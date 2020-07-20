@@ -37,14 +37,14 @@ public final class FindMeetingQuery {
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
     Collection<String> peopleAttending = request.getAttendees();
     List<Event> eventWithPeopleAttending = new ArrayList<>();
-    for(Event curr_event : events){
+    for(Event currEvent : events){
       boolean isNotAttending = true;
-      for(String curr_attendee : curr_event.getAttendees()){
-        if(peopleAttending.contains(curr_attendee))
+      for(String currAttendee : currEvent.getAttendees()){
+        if(peopleAttending.contains(currAttendee))
         isNotAttending = false;
       }
       if(!isNotAttending)
-        eventWithPeopleAttending.add(curr_event);
+        eventWithPeopleAttending.add(currEvent);
     }
     Collections.sort(eventWithPeopleAttending, orderByStartThenEnd);
 
