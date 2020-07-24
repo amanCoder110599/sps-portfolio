@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.Set;
 
 public final class FindMeetingQuery {
-
+  private int oneMinute = 1;
   public static final Comparator<Event> orderByStartThenEnd = new Comparator<Event>() {
     @Override
     public int compare(Event a, Event b){
@@ -66,7 +66,7 @@ public final class FindMeetingQuery {
       maxTimeTillNow = Math.max(maxTimeTillNow, busy.getWhen().end());
     }
 
-    if(maxTimeTillNow + request.getDuration() - 1 <= TimeRange.END_OF_DAY)
+    if(maxTimeTillNow + request.getDuration() - oneMinute <= TimeRange.END_OF_DAY)
       optRanges.add(TimeRange.fromStartEnd(maxTimeTillNow, TimeRange.END_OF_DAY, true));
 
     return optRanges;
