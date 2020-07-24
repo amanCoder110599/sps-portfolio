@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.Set;
 
 public final class FindMeetingQuery {
-
+  private int oneMinute = 1;
   public static final Comparator<Event> orderByStartThenEnd = new Comparator<Event>() {
     @Override
     public int compare(Event a, Event b){
@@ -37,38 +37,38 @@ public final class FindMeetingQuery {
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
     Collection<String> peopleAttending = request.getAttendees();
     List<Event> eventWithPeopleAttending = new ArrayList<>();
-    for(Event curr_event : events){
+    for(Event busy : events){
       boolean isNotAttending = true;
-      for(String curr_attendee : curr_event.getAttendees()){
-        if(peopleAttending.contains(curr_attendee))
+      for(String currAttendee : busy.getAttendees()){
+        if(peopleAttending.contains(currAttendee))
         isNotAttending = false;
       }
       if(!isNotAttending)
-        eventWithPeopleAttending.add(curr_event);
+        eventWithPeopleAttending.add(busy);
     }
     Collections.sort(eventWithPeopleAttending, orderByStartThenEnd);
 
-    Collection<TimeRange> opt_ranges = new ArrayList<>();
+    Collection<TimeRange> optRanges = new ArrayList<>();
 
     //Edge case
     //if the duration is greater than the duration of a day
     if(request.getDuration() > TimeRange.WHOLE_DAY.duration()){
-      return opt_ranges;
+      return optRanges;
     }
     
     int maxTimeTillNow = TimeRange.START_OF_DAY;
-    for(Event e : eventWithPeopleAttending){
-      if(e.getWhen().end() <= maxTimeTillNow)
+    for(Event busy : eventWithPeopleAttending){
+      if(busy.getWhen().end() <= maxTimeTillNow)
         continue;
       TimeRange curr = TimeRange.fromStartDuration(maxTimeTillNow, (int)request.getDuration());
-      if(!curr.overlaps(e.getWhen())) //if [maxTimeTillNow, maxTimeTillNow + request.getDuration() - 1] does not overlap with e
-        opt_ranges.add(TimeRange.fromStartEnd(maxTimeTillNow, e.getWhen().start(), false));
-      maxTimeTillNow = Math.max(maxTimeTillNow, e.getWhen().end());
+      if(!curr.overlaps(busy.getWhen())) //if [maxTimeTillNow, maxTimeTillNow + request.getDuration() - 1] does not overlap with e
+        optRanges.add(TimeRange.fromStartEnd(maxTimeTillNow, busy.getWhen().start(), false));
+      maxTimeTillNow = Math.max(maxTimeTillNow, busy.getWhen().end());
     }
 
-    if(maxTimeTillNow <= TimeRange.END_OF_DAY)
-      opt_ranges.add(TimeRange.fromStartEnd(maxTimeTillNow, TimeRange.END_OF_DAY, true));
+    if(maxTimeTillNow + request.getDuration() - oneMinute <= TimeRange.END_OF_DAY)
+      optRanges.add(TimeRange.fromStartEnd(maxTimeTillNow, TimeRange.END_OF_DAY, true));
 
-    return opt_ranges;
+    return optRanges;
   }
 }
