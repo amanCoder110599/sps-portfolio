@@ -68,8 +68,8 @@ public class AddCommentServlet extends HttpServlet {
       String comment = (String) entity.getProperty("comment");
       long timestamp = Long.parseLong((String)entity.getProperty("timestamp"));
 
-      Comment curr_comment = new Comment(id, comment, email, timestamp);
-      comments.add(curr_comment);
+      Comment currComment = new Comment(id, comment, email, timestamp);
+      comments.add(currComment);
     }
 
     Gson gson = new Gson();
