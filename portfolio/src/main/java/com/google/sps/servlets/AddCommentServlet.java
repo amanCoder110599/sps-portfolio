@@ -53,6 +53,7 @@ public class AddCommentServlet extends HttpServlet {
       commentEntity.setProperty("email", email);
       commentEntity.setProperty("timestamp", System.currentTimeMillis());
       
+      
       datastore.put(commentEntity);
     }
     
