@@ -26,7 +26,6 @@ function loadAllComments(comments){
     UserEmail.innerText = Comment.email;
     let UserComment = document.createElement('li');
     UserComment.innerText = Comment.comment;
-
     let commentItem = document.createElement('div');
     commentItem.appendChild(UserEmail);
     commentItem.appendChild(UserComment);
