@@ -25,7 +25,8 @@ function loadAllComments(comments){
     let UserEmail = document.createElement('p');
     UserEmail.innerText = Comment.email;
     let UserComment = document.createElement('li');
-    UserComment.innerText = Comment.comment;
+    var score = (parseFloat(Comment.commentScore).toPrecision(2));
+    UserComment.innerText = Comment.comment + '(' + score + ')';
 
     let commentItem = document.createElement('div');
     commentItem.appendChild(UserEmail);

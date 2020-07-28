@@ -29,6 +29,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.cloud.language.v1.Document;
+import com.google.cloud.language.v1.LanguageServiceClient;
+import com.google.cloud.language.v1.Sentiment;
 import java.util.ArrayList;
 
 
@@ -42,12 +45,14 @@ public class AddCommentServlet extends HttpServlet {
     String comment = request.getParameter("comment");
     if(comment.length() > 0){
       String email = userService.getCurrentUser().getEmail();
-      System.out.println(comment +" "+email);
+      double score = getScore(comment);
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
       Entity commentEntity = new Entity("Comment");
       commentEntity.setProperty("comment", comment);
+      commentEntity.setProperty("commentScore", score);
       commentEntity.setProperty("email", email);
       commentEntity.setProperty("timestamp", System.currentTimeMillis());
+      
       datastore.put(commentEntity);
     }
     
@@ -64,11 +69,11 @@ public class AddCommentServlet extends HttpServlet {
     ArrayList<Comment> comments = new ArrayList<>();
     for (Entity entity : results.asIterable()) {
       long id = entity.getKey().getId();
-      String email = (String) entity.getProperty("email");
-      String comment = (String) entity.getProperty("comment");
-      long timestamp = Long.parseLong((String)entity.getProperty("timestamp"));
-
-      Comment currComment = new Comment(id, comment, email, timestamp);
+      String email = entity.getProperty("email").toString();
+      String comment = entity.getProperty("comment").toString();
+      long timestamp = Long.parseLong(entity.getProperty("timestamp").toString());
+      double commentScore = Double.parseDouble(entity.getProperty("commentScore").toString());
+      Comment currComment = new Comment(id, comment, commentScore, email, timestamp);
       comments.add(currComment);
     }
 
@@ -76,5 +81,16 @@ public class AddCommentServlet extends HttpServlet {
 
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(comments));
+  }
+
+  private double getScore(String comment) throws IOException{
+    Document doc =
+        Document.newBuilder().setContent(comment).setType(Document.Type.PLAIN_TEXT).build();
+    LanguageServiceClient languageService = LanguageServiceClient.create();
+    Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
+    double score = sentiment.getScore();
+    languageService.close();
+
+    return score;
   }
 }
